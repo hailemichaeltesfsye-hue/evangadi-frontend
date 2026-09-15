@@ -1,0 +1,260 @@
+:root {
+  --navy: #16233F;
+  --navy-hover: #0F1A30;
+  --orange: #F7941E;
+  --lavender: #C9C6F5;
+  --border: #E4E6ED;
+  --muted: #6B7280;
+  --paper: #FFFFFF;
+}
+
+/* ===== Navbar ===== */
+.site-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 64px;
+  border-bottom: 1px solid var(--border);
+  background: var(--paper);
+}
+
+.site-nav .logo {
+  font-weight: 700;
+  font-size: 20px;
+  color: var(--navy);
+  letter-spacing: 0.5px;
+}
+
+.site-nav .logo span {
+  color: var(--orange);
+}
+
+.site-nav .nav-links {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+}
+
+.site-nav .nav-links a {
+  color: var(--navy);
+  text-decoration: none;
+  font-size: 15px;
+}
+
+.site-nav .sign-in-btn {
+  background: var(--navy);
+  color: #fff;
+  padding: 10px 22px;
+  border-radius: 4px;
+  font-size: 14.5px;
+  font-weight: 500;
+  border: none;
+  cursor: pointer;
+}
+
+.site-nav .sign-in-btn:hover {
+  background: var(--navy-hover);
+}
+
+/* ===== Auth page layout ===== */
+.auth-page {
+  display: flex;
+  min-height: calc(100vh - 78px);
+  align-items: center;
+  padding: 60px 80px;
+  gap: 80px;
+}
+
+.auth-card-wrap {
+  position: relative;
+}
+
+/* the lavender offset rectangle behind the card */
+.auth-card-wrap::before {
+  content: "";
+  position: absolute;
+  top: -14px;
+  left: -14px;
+  width: 60px;
+  height: 100%;
+  background: var(--lavender);
+  border-radius: 2px;
+  z-index: 0;
+}
+
+.auth-card {
+  position: relative;
+  z-index: 1;
+  background: var(--paper);
+  width: 440px;
+  padding: 44px 40px;
+  box-shadow: 0 4px 20px rgba(22, 35, 63, 0.08);
+}
+
+.auth-card h1 {
+  font-size: 26px;
+  font-weight: 600;
+  color: var(--navy);
+  margin: 0 0 8px;
+}
+
+.auth-card .auth-sub {
+  margin: 0 0 28px;
+  color: var(--muted);
+  font-size: 14.5px;
+}
+
+.auth-card .auth-sub a {
+  color: var(--orange);
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.auth-field {
+  margin-bottom: 16px;
+  position: relative;
+}
+
+.auth-field input {
+  width: 100%;
+  padding: 13px 14px;
+  font-size: 15px;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  outline: none;
+  box-sizing: border-box;
+  color: var(--navy);
+}
+
+.auth-field input::placeholder {
+  color: #9AA3AF;
+}
+
+.auth-field input:focus {
+  border-color: var(--navy);
+}
+
+.auth-row2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.auth-terms {
+  font-size: 13px;
+  color: var(--muted);
+  margin: 12px 0 20px;
+}
+
+.auth-terms a {
+  color: var(--orange);
+  text-decoration: none;
+}
+
+.auth-submit {
+  width: 100%;
+  padding: 13px;
+  background: var(--navy);
+  color: #fff;
+  border: none;
+  font-size: 15px;
+  font-weight: 500;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.auth-submit:hover {
+  background: var(--navy-hover);
+}
+
+.auth-forgot {
+  position: absolute;
+  right: 0;
+  top: 13px;
+  font-size: 13px;
+  color: var(--muted);
+  text-decoration: none;
+}
+
+/* ===== About panel (right side) ===== */
+.auth-about .eyebrow {
+  color: var(--orange);
+  font-weight: 600;
+  font-size: 14px;
+  margin: 0 0 6px;
+}
+
+.auth-about h2 {
+  font-size: 32px;
+  font-weight: 700;
+  color: var(--navy);
+  margin: 0 0 16px;
+}
+
+.auth-about p {
+  color: var(--muted);
+  font-size: 15px;
+  line-height: 1.6;
+  max-width: 460px;
+}
+
+/* ===== Questions / home page ===== */
+.qpage-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 28px 64px;
+}
+
+.ask-btn {
+  background: var(--navy);
+  color: #fff;
+  border: none;
+  padding: 11px 20px;
+  border-radius: 4px;
+  font-size: 14.5px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.welcome-pill {
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 8px 18px;
+  font-size: 14px;
+  color: var(--navy);
+}
+
+.qpage-search {
+  padding: 0 64px 24px;
+}
+
+.qpage-search input {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  font-size: 15px;
+  box-sizing: border-box;
+}
+
+/* ===== Footer ===== */
+.site-footer {
+  background: var(--navy);
+  color: #C7CBD6;
+  padding: 48px 64px 32px;
+}
+
+.site-footer h4 {
+  color: #fff;
+  font-size: 16px;
+  margin: 0 0 14px;
+}
+
+.site-footer a {
+  color: #C7CBD6;
+  text-decoration: none;
+  display: block;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
