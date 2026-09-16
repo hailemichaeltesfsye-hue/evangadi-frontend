@@ -2,7 +2,6 @@
   --navy: #16233F;
   --navy-hover: #0F1A30;
   --orange: #F7941E;
-  --lavender: #C9C6F5;
   --border: #E4E6ED;
   --muted: #6B7280;
   --paper: #FFFFFF;
@@ -63,32 +62,20 @@
   align-items: center;
   padding: 60px 80px;
   gap: 80px;
+  background: var(--paper);
 }
 
 .auth-card-wrap {
   position: relative;
 }
 
-/* the lavender offset rectangle behind the card */
-.auth-card-wrap::before {
-  content: "";
-  position: absolute;
-  top: -14px;
-  left: -14px;
-  width: 60px;
-  height: 100%;
-  background: var(--lavender);
-  border-radius: 2px;
-  z-index: 0;
-}
-
 .auth-card {
   position: relative;
-  z-index: 1;
   background: var(--paper);
   width: 440px;
   padding: 44px 40px;
-  box-shadow: 0 4px 20px rgba(22, 35, 63, 0.08);
+  border: 1px solid var(--border);
+  box-shadow: 0 4px 20px rgba(22, 35, 63, 0.06);
 }
 
 .auth-card h1 {
@@ -124,6 +111,7 @@
   outline: none;
   box-sizing: border-box;
   color: var(--navy);
+  background: #FFFFFF;
 }
 
 .auth-field input::placeholder {
