@@ -1,16 +1,30 @@
-# React + Vite
+# Evangadi Forum — Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+React frontend for the Evangadi Forum application. Built with Vite, React Router, and Axios.
 
-Currently, two official plugins are available:
+## Tech Stack
+- React (Vite)
+- React Router (`react-router-dom`)
+- Axios for API calls
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Getting Started
+```bash
+npm install
+npm run dev
+```
 
-## React Compiler
+## Backend Connection
+Set the base URL in `src/axiosConfig.js`:
+```js
+const axiosBase = axios.create({
+  baseURL: 'http://localhost:10000/api'
+});
+```
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Authentication Flow
+- On login, the backend returns a JWT token, saved to `localStorage`.
+- `App.jsx` checks the token on load via `GET /users/check` to restore the session.
+- Protected pages require a valid token; otherwise the user is redirected to `/login`.
 
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## Notes
+This repo contains **frontend only**. The backend API lives in a separate repo: `evangadi-backend`.
