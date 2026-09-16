@@ -37,7 +37,7 @@ function Login() {
   return (
     <div>
       <nav className="site-nav">
-        <div className="logo">EVANGADI<span> FORUM</span></div>
+        <div className="logo">E<span className="accent">V</span>ANGADI</div>
         <div className="nav-links">
           <a href="/">Home</a>
           <a href="/">How it Works</a>

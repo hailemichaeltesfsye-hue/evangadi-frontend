@@ -13,7 +13,7 @@ function Navbar() {
 
   return (
     <nav className="site-nav">
-      <Link to="/" className="logo">EVANGADI<span> FORUM</span></Link>
+      <Link to="/" className="logo">E<span className="accent">V</span>ANGADI</Link>
       <div className="nav-links">
         <Link to="/">Home</Link>
         <a href="#">How it Works</a>
